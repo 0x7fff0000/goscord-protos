@@ -1,16 +1,18 @@
 syntax = "proto3";
 
-package sso;
+package sso.v1;
 
-option go_package = "goscord.sso.v1;ssov1"; 
+import "buf/validate/validate.proto";
 
-service Auth {
+option go_package = "github.com/0x7fff0000/goscord-protos/gen/go/sso/v1;ssov1";
+
+service AuthService {
     rpc Register(RegisterRequest) returns (RegisterResponse);
     rpc Login(LoginRequest) returns (LoginResponse);
 }
 
 message RegisterRequest {
-    string email = 1;
+    string email = 1 [(buf.validate.field).string.min_len = 1];
     string password = 2;
 }
 
