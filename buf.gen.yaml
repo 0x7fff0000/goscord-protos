@@ -1,9 +1,9 @@
 version: v2
-# managed:
-#   enabled: true
-#   override:
-#     - file_option: go_package_prefix
-#       value: github.com/0x7fff0000/goscord-protos/gen
+managed:
+  enabled: true
+  disable:
+    - file_option: go_package_prefix
+      module: buf.build/bufbuild/protovalidate
 plugins:
   - remote: buf.build/protocolbuffers/go
     out: gen/go
