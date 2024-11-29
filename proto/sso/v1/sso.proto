@@ -4,7 +4,7 @@ package sso.v1;
 
 import "buf/validate/validate.proto";
 
-option go_package = "github.com/0x7fff0000/goscord-protos/gen/go/sso/v1;ssov1";
+option go_package = "github.com/0x7fff0000/goscord-protos/gen/go/sso/v1;sso";
 
 service AuthService {
   rpc Register(RegisterRequest) returns (RegisterResponse);

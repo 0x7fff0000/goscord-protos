@@ -2,7 +2,7 @@
 //
 // Source: sso/v1/sso.proto
 
-package ssov1connect
+package ssoconnect
 
 import (
 	connect "connectrpc.com/connect"
